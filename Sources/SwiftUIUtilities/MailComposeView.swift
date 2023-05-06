@@ -1,6 +1,6 @@
 //
 //  MailComposeView.swift
-//  Stokki
+//  SwiftUIUtilities
 //
 //  Created by Christian Mitteldorf on 03/03/2020.
 //  Copyright © 2020 Mitteldorf. All rights reserved.

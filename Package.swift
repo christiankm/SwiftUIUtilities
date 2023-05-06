@@ -6,10 +6,10 @@ import PackageDescription
 let package = Package(
     name: "SwiftUIUtilities",
     platforms: [
-        //        .macOS(.v11),
-        ////        .macCatalyst(.v13)
+        .macOS(.v11),
+        .macCatalyst(.v13),
         .iOS(.v13),
-        //        .watchOS(.v7)
+        .watchOS(.v7)
     ],
     products: [
         .library(
