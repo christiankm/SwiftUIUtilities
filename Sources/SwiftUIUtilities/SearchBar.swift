@@ -13,9 +13,14 @@ import SwiftUI
 
 public struct SearchBar: UIViewRepresentable {
 
-    @Binding public var text: String
+    @Binding var text: String
 
-    public var placeholder: String
+    var placeholder: String
+
+    public init(text: Binding<String>, placeholder: String) {
+        self._text = text
+        self.placeholder = placeholder
+    }
 
     public func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> UISearchBar {
         let searchBar = UISearchBar(frame: .zero)
@@ -38,11 +43,11 @@ public struct SearchBar: UIViewRepresentable {
 
         @Binding var text: String
 
-        init(text: Binding<String>) {
+        public init(text: Binding<String>) {
             _text = text
         }
 
-        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             text = searchText
         }
     }
